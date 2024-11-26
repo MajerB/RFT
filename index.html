@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vizsgajelentkező Rendszer</title>
+</head>
+<body>
+    <header>
+        <h1>Vizsgajelentkező Rendszer</h1>
+    </header>
+    <main>
+        <section id="create-exam">
+            <h2>Vizsga létrehozása</h2>
+            <form id="exam-form">
+                <input type="text" id="exam-name" placeholder="Vizsga neve" required>
+                <input type="date" id="exam-date" required>
+                <button type="submit">Létrehozás</button>
+            </form>
+            <ul id="exam-list"></ul>
+        </section>
+        <section id="student-signup">
+            <h2>Diákok jelentkezése</h2>
+            <form id="signup-form">
+                <input type="text" id="student-name" placeholder="Diák neve" required>
+                <select id="exam-select"></select>
+                <button type="submit">Jelentkezés</button>
+            </form>
+            <ul id="student-list"></ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
