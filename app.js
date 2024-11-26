@@ -5,7 +5,7 @@ const studentList = document.getElementById('student-list');
 const exams = [];
 const students = [];
 
-// Exam creation
+
 document.getElementById('exam-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const examName = document.getElementById('exam-name').value;
@@ -24,7 +24,7 @@ document.getElementById('exam-form').addEventListener('submit', (e) => {
     examList.appendChild(listItem);
 });
 
-// Student signup
+
 document.getElementById('signup-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const studentName = document.getElementById('student-name').value;
