@@ -1,0 +1,39 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # GitHub repo letöltése
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Node.js telepítése
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    # Függőségek telepítése
+    - name: Install dependencies
+      run: npm install
+
+    # Unit tesztek futtatása
+    - name: Run tests
+      run: npm test
+
+  deploy:
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy application
+      run: echo "Itt deploy script jönne a szerverre"
